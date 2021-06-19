@@ -1,0 +1,35 @@
+span[role="button"] {
+	cursor: pointer;
+}
+button {
+	width: 50%;
+}
+img.illustration {
+	height: 150px;
+}
+div.form-input-div {
+	margin-bottom: 35px;
+}
+div.form-input-div input {
+	height: 50px;
+}
+button[type="submit"] {
+	height: 50px;
+}
+.btn-admin {
+	width: fit-content;
+}
+.btn-admin::before {
+	display: inline-block;
+	content: "\2794";
+	animation: adminLoginPointer 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes adminLoginPointer {
+	from {
+		color: transparent;
+	}
+	to {
+		color: inherit;
+	}
+}

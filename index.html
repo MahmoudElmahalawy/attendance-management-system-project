@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Attendance Management System</title>
+		<link rel="stylesheet" href="css/libs/bootstrap.css" />
+		<link rel="stylesheet" href="css/libs/font-awesome.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+	</head>
+	<body>
+		<div class="container admin-login text-right">
+			<button
+				type="button"
+				class="btn btn-lg btn-link btn-admin"
+				data-bs-toggle="modal"
+				data-bs-target="#adminLoginModal"
+			>
+				Admin Login
+			</button>
+		</div>
+		<div class="h1 text-center p-5">
+			<h1>Attendance Management System</h1>
+		</div>
+		<div class="container">
+			<div class="row pt-5 g-4 align-items-center justify-content-center">
+				<!-- Button trigger for login modal -->
+				<div class="col-12 col-md-6 my-5 text-center">
+					<img
+						src="images/login.svg"
+						alt="Login Illustration"
+						class="d-block img-fluid mx-auto my-2 illustration"
+					/>
+					<button
+						type="button"
+						class="btn btn-lg btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#loginModal"
+					>
+						Login
+					</button>
+				</div>
+				<!-- Button trigger for register modal -->
+				<div class="col-12 col-md-6 my-5 text-center">
+					<img
+						src="images/register.svg"
+						alt="Register Illustration"
+						class="d-block img-fluid mx-auto my-2 illustration"
+					/>
+					<button
+						type="button"
+						class="btn btn-lg btn-outline-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#registerModal"
+					>
+						Register
+					</button>
+				</div>
+			</div>
+
+			<!-- Admin Login Modal -->
+			<div class="modal fade" id="adminLoginModal" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="adminLoginModalLabel">Admin Login</h4>
+							<span role="button" class="btn-close" data-bs-dismiss="modal"> &times; </span>
+						</div>
+						<div class="modal-body">
+							<form class="row g-3 needs-validation" id="adminLoginForm" novalidate>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipAdminUsername" class="form-label">Admin</label>
+									<input
+										type="text"
+										class="form-control"
+										id="validationTooltipAdminUsername"
+										placeholder="Admin Username"
+										required
+									/>
+									<div class="valid-tooltip">Looks good!</div>
+								</div>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipAdminPassword" class="form-label">Password</label>
+									<input
+										type="password"
+										class="form-control"
+										id="validationTooltipAdminPassword"
+										placeholder="*********"
+										required
+									/>
+									<div class="valid-tooltip">Looks good!</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="submit"
+								class="btn btn-primary mx-auto"
+								form="adminLoginForm"
+								id="adminLoginFormBtn"
+							>
+								Login
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Of Modal-->
+
+			<!-- Login Modal -->
+			<div class="modal fade" id="loginModal" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="loginModalLabel">Login</h4>
+							<span role="button" class="btn-close" data-bs-dismiss="modal"> &times; </span>
+						</div>
+						<div class="modal-body">
+							<form class="row g-3 needs-validation" id="loginForm" novalidate>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipUsername" class="form-label">Username</label>
+									<input
+										type="text"
+										class="form-control"
+										id="validationTooltipUsername"
+										placeholder="Enter code sent to your email."
+										required
+									/>
+									<div class="valid-tooltip">Looks good!</div>
+								</div>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipUserPassword" class="form-label">Password</label>
+									<input
+										type="password"
+										class="form-control"
+										id="validationTooltipUserPassword"
+										placeholder="*********"
+										required
+									/>
+									<div class="valid-tooltip">Looks good!</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary mx-auto" form="loginForm" id="loginFormBtn">
+								Login
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Of Modal-->
+
+			<!-- Register Modal -->
+			<div class="modal fade" id="registerModal" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="registerModalLabel">Register</h4>
+							<span role="button" class="btn-close" data-bs-dismiss="modal"> &times; </span>
+						</div>
+						<div class="modal-body">
+							<form class="row g-3 needs-validation" id="registerForm" novalidate>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipFname" class="form-label">First name</label>
+									<input
+										type="text"
+										class="form-control"
+										id="validationTooltipFname"
+										placeholder="Mahmoud"
+										required
+									/>
+									<div class="valid-tooltip">Looks good!</div>
+								</div>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipLname" class="form-label">Last name</label>
+									<input
+										type="text"
+										class="form-control"
+										id="validationTooltipLname"
+										placeholder="Hamdy"
+										required
+									/>
+									<div class="valid-tooltip">Looks good!</div>
+								</div>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipAddress" class="form-label">Address</label>
+									<input
+										type="text"
+										class="form-control"
+										id="validationTooltipAddress"
+										placeholder="Gharbia, Tanta, Nahas St., Building no. 123"
+										required
+									/>
+									<div class="invalid-tooltip">Please provide a valid address.</div>
+								</div>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipEmail" class="form-label">Email</label>
+									<div class="input-group has-validation">
+										<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+										<input
+											type="email"
+											class="form-control"
+											id="validationTooltipEmail"
+											placeholder="email@corporate.org"
+											required
+										/>
+										<div class="invalid-tooltip">Please enter a valid email.</div>
+									</div>
+								</div>
+								<div class="col-12 position-relative form-input-div">
+									<label for="validationTooltipAge" class="form-label">Age</label>
+									<div class="input-group has-validation">
+										<input
+											type="number"
+											class="form-control"
+											id="validationTooltipAge"
+											min="15"
+											max="99"
+											placeholder="Must be between 15 and 99"
+											required
+										/>
+										<span class="input-group-text">Years</span>
+										<div class="invalid-tooltip">Please provide a valid age.</div>
+									</div>
+								</div>
+								<!-- <div class="col-12">
+									<button class="btn btn-primary" type="submit">Submit form</button>
+								</div> -->
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button
+								class="btn btn-primary w-100"
+								type="submit"
+								form="registerForm"
+								id="registerFormBtn"
+							>
+								Register
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Of Modal-->
+		</div>
+		<!-- End Of Container-->
+
+		<script src="js/libs/bootstrap.bundle.min.js"></script>
+		<script src="js/libs/JQuery-3.3.1.min.js"></script>
+		<script src="js/index.js" type="module"></script>
+	</body>
+</html>

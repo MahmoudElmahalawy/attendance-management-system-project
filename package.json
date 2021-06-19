@@ -1,0 +1,23 @@
+{
+	"name": "attendance-management-system-project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"json:server": "json-server --watch db.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MahmoudElmahalawy/attendance-management-system-project.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MahmoudElmahalawy/attendance-management-system-project/issues"
+	},
+	"homepage": "https://github.com/MahmoudElmahalawy/attendance-management-system-project#readme",
+	"dependencies": {
+		"json-server": "^0.16.3"
+	}
+}
