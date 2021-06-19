@@ -6,6 +6,7 @@ import {
 	addReportId,
 	addReportForEmp,
 } from "./registration.js";
+import { verifyAuthenticity } from "./login.js";
 
 (function () {
 	// "use strict";
@@ -37,10 +38,10 @@ import {
 			.find("input")
 			.each(function () {
 				if (!$(this).val()) {
-					alert("a7a");
 					isNotComplete = true;
 				}
 			});
+
 		if (isNotComplete) return;
 
 		let fName = $(this).find(":text:first").val();
@@ -77,21 +78,14 @@ import {
 	$("#adminLoginFormBtn").click(function () {
 		let userName = $(this.form).find(":text").val();
 		let userPassword = $(this.form).find(":password").val();
-
-		if (userName && userPassword) {
-			console.log(userName);
-			console.log(userPassword);
-		}
 	});
 
 	// Handling Employees Login Credentials
-	$("#loginFormBtn").click(function () {
-		let userName = $(this.form).find(":text").val();
-		let userPassword = $(this.form).find(":password").val();
+	$("#loginForm").submit(function (e) {
+		e.preventDefault();
+		let userName = $(this).find(":text").val();
+		let userPassword = $(this).find(":password").val();
 
-		if (userName && userPassword) {
-			console.log(userName);
-			console.log(userPassword);
-		}
+		verifyAuthenticity(userName, userPassword);
 	});
 })();

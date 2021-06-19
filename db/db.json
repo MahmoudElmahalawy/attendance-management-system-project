@@ -54,6 +54,14 @@
 			"id": 1,
 			"report": [
 				{
+					"date": "5/31/2021",
+					"time": "7:01:00 AM",
+					"attendance": 1,
+					"late": 0,
+					"excuse": 0,
+					"absence": 0
+				},
+				{
 					"date": "6/15/2021",
 					"time": "7:00:00 AM",
 					"attendance": 1,
@@ -74,6 +82,14 @@
 		{
 			"id": 2,
 			"report": [
+				{
+					"date": "5/31/2021",
+					"time": "8:06:00 AM",
+					"attendance": 0,
+					"late": 1,
+					"excuse": 0,
+					"absence": 0
+				},
 				{
 					"date": "6/15/2021",
 					"time": "7:30:05 AM",
@@ -96,6 +112,14 @@
 			"id": 3,
 			"report": [
 				{
+					"date": "5/31/2021",
+					"time": "9:07:00 AM",
+					"attendance": 0,
+					"late": 1,
+					"excuse": 0,
+					"absence": 0
+				},
+				{
 					"date": "6/15/2021",
 					"time": "7:00:00 AM",
 					"attendance": 1,
@@ -106,7 +130,7 @@
 				{
 					"date": "6/16/2021",
 					"time": "08:59:00 AM",
-					"attendance": 1,
+					"attendance": 0,
 					"late": 1,
 					"excuse": 0,
 					"absence": 0
@@ -116,6 +140,14 @@
 		{
 			"id": 4,
 			"report": [
+				{
+					"date": "5/31/2021",
+					"time": "7:49:00 AM",
+					"attendance": 1,
+					"late": 0,
+					"excuse": 0,
+					"absence": 0
+				},
 				{
 					"date": "6/15/2021",
 					"time": "12:00:00 PM",
