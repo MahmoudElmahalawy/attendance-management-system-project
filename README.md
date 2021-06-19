@@ -12,4 +12,4 @@ npm run json:server
 
 #### the db server will be running at port 3000
 
-[http://locahost:3000](http://locahost:3000)
+[http://localhost:3000](http://localhost:3000)
