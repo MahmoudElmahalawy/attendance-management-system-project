@@ -4,21 +4,26 @@ Using JSON-Server to create a fake RESTful API to handle database and backend wo
 
 ---
 
-### To run database server use command
+### To run database server run command
 
 ```sh
 npm run json:server
 ```
 
-#### the db server will be running at port 3000 --> [http://localhost:3000](http://localhost:3000)
+#### the db server will be running at localhost port 3000 --> [http://localhost:3000](http://localhost:3000)
+
+<br/>
 
 ---
 
 ### Database
 
----
+<br/>
 
-> Users Table
+> Users and Reports Tables
+
+<table>
+<tr><td>
 
 | Name     | Value  |
 | -------- | ------ |
@@ -34,9 +39,7 @@ npm run json:server
 | empType  | Number |
 | reportId | Number |
 
----
-
-> Reports Table
+</td><td>   -   <td></d>
 
 | Name       | Value    |
 | ---------- | -------- |
@@ -47,3 +50,6 @@ npm run json:server
 | late       | Boolean  |
 | excuse     | Boolean  |
 | absence    | Boolean  |
+
+</td></tr>
+</table>
