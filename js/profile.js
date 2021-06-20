@@ -3,6 +3,7 @@
 
 	const empLoginId = sessionStorage.getItem("empLoginId");
 
+	// Handling data to be displayed for employee's profile
 	(async function () {
 		const fetchUser = await fetch(`http://localhost:3000/users/${empLoginId}`);
 		const userData = await fetchUser.json();

@@ -1,3 +1,4 @@
+// Checking if username and password entered exist in database
 async function checkEmpCreds(userName, userPassword) {
 	if (!(userName && userPassword)) return;
 	const fetchGetRes = await fetch(`http://localhost:3000/users?userName=${userName}`);
@@ -11,6 +12,7 @@ async function checkEmpCreds(userName, userPassword) {
 	return { isAuthed, id: data[0].id };
 }
 
+// Alerting user of incorrect credentials and redirecting to profile page
 function verifyAuthenticity(userName, userPassword) {
 	if (!(userName && userPassword)) return;
 	(async function () {
