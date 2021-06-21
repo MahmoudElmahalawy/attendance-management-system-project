@@ -9,7 +9,7 @@
 			"age": 24,
 			"userName": "MahmoudAdmin",
 			"password": "12345",
-			"empType": 2,
+			"empType": 1,
 			"reportId": 1
 		},
 		{
@@ -21,7 +21,7 @@
 			"age": 24,
 			"userName": "MohamedKhaled",
 			"password": "12345",
-			"empType": 1,
+			"empType": 0,
 			"reportId": 2
 		},
 		{
@@ -100,7 +100,7 @@
 				},
 				{
 					"date": "6/16/2021",
-					"time": "07:36:14 AM",
+					"time": "7:36:14 AM",
 					"attendance": 1,
 					"late": 0,
 					"excuse": 0,
@@ -129,7 +129,7 @@
 				},
 				{
 					"date": "6/16/2021",
-					"time": "08:59:00 AM",
+					"time": "8:59:00 AM",
 					"attendance": 0,
 					"late": 1,
 					"excuse": 0,
@@ -158,7 +158,7 @@
 				},
 				{
 					"date": "6/16/2021",
-					"time": "07:59:00 AM",
+					"time": "7:59:00 AM",
 					"attendance": 1,
 					"late": 0,
 					"excuse": 0,

@@ -6,7 +6,7 @@ import {
 	addReportId,
 	addReportForEmp,
 } from "./registration.js";
-import { verifyAuthenticity } from "./login.js";
+import { verifyAuthenticityOfEmp, verifyAuthenticityOfAdmin } from "./login.js";
 
 (function () {
 	// "use strict";
@@ -75,9 +75,12 @@ import { verifyAuthenticity } from "./login.js";
 	});
 
 	// Handling Admin Login Credentials
-	$("#adminLoginFormBtn").click(function () {
-		let userName = $(this.form).find(":text").val();
-		let userPassword = $(this.form).find(":password").val();
+	$("#adminLoginForm").submit(function (e) {
+		e.preventDefault();
+		let userName = $(this).find(":text").val();
+		let userPassword = $(this).find(":password").val();
+
+		verifyAuthenticityOfAdmin(userName, userPassword);
 	});
 
 	// Handling Employees Login Credentials
@@ -86,6 +89,6 @@ import { verifyAuthenticity } from "./login.js";
 		let userName = $(this).find(":text").val();
 		let userPassword = $(this).find(":password").val();
 
-		verifyAuthenticity(userName, userPassword);
+		verifyAuthenticityOfEmp(userName, userPassword);
 	});
 })();

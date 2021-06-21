@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Admin Panel</title>
+		<link rel="shortcut icon" href="./images/icon.ico" />
+		<link rel="stylesheet" href="css/libs/fontawesome.css" />
+		<link rel="stylesheet" href="css/libs/bootstrap.css" />
+		<link rel="stylesheet" href="css/admin-panel.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-end mt-4">
+				<button
+					type="button"
+					class="btn btn-lg btn-link btn-record"
+					data-bs-toggle="modal"
+					data-bs-target="#recordModal"
+					title="Click to record attendance of an employee"
+				>
+					Record Attendance of an Employee
+				</button>
+			</div>
+			<div class="my-5" id="admin-personal-info">
+				<p class="small">Admin's Profile</p>
+				<h2 class="h1" id="admin-name-header">Admin's Name</h2>
+			</div>
+			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link btn me-1 active"
+						id="pills-home-tab"
+						data-bs-toggle="pill"
+						data-bs-target="#pills-home"
+						type="button"
+						role="tab"
+					>
+						Employees' Monthly Report
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link btn me-1"
+						id="pills-profile-tab"
+						data-bs-toggle="pill"
+						data-bs-target="#pills-profile"
+						type="button"
+						role="tab"
+					>
+						Employees' Daily Report
+					</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="pills-tabContent">
+				<div class="tab-pane fade show active ps-3 monthly-report" id="pills-home" role="tabpanel">
+					<div class="accordion" id="allEmployeesMonthReport"></div>
+				</div>
+				<div class="tab-pane fade ps-3 daily-report" id="pills-profile" role="tabpanel">
+					<div class="accordion" id="allEmployeesDayReport"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Record Attendance Modal -->
+		<div class="modal fade" id="recordModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="recordModalLabel">Record Attendance</h4>
+						<span role="button" class="btn-close" data-bs-dismiss="modal"> &times; </span>
+					</div>
+					<div class="modal-body">
+						<form class="row g-3 needs-validation" id="recordForm" novalidate>
+							<div class="col-12 position-relative form-input-div">
+								<label for="validationTooltipRecordUsername" class="form-label">Username</label>
+								<input
+									type="text"
+									class="form-control"
+									id="validationTooltipRecordUsername"
+									placeholder="Username of employee to record"
+									required
+								/>
+								<div class="valid-tooltip">Looks good!</div>
+							</div>
+					<div class="modal-footer">
+						<button
+							type="submit"
+							class="btn btn-primary mx-auto"
+							form="recordForm"
+							id="adminLoginFormBtn"
+						>
+							Confirm Attendance
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ********* Scripts ********* -->
+		<script src="js/libs/bootstrap.bundle.min.js"></script>
+		<script src="js/libs/JQuery-3.3.1.min.js"></script>
+		<script src="js/admin-panel.js" type="module"></script>
+	</body>
+</html>

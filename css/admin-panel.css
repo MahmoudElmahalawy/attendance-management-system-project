@@ -1,0 +1,17 @@
+.btn-record {
+	width: fit-content;
+}
+.btn-record::before {
+	display: inline-block;
+	content: "\2714";
+	animation: recordLoginPointer 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes recordLoginPointer {
+	from {
+		color: transparent;
+	}
+	to {
+		color: inherit;
+	}
+}
