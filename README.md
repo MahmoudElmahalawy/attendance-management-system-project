@@ -43,6 +43,7 @@ npm run json:server
 
 | Name       | Value    |
 | ---------- | -------- |
+| empId      | Number   |
 | id         | Number   |
 | date       | Date     |
 | time       | DateTime |
