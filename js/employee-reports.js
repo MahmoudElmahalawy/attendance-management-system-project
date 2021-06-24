@@ -19,11 +19,11 @@ function renderMonthReport(reportData, monthReportContainer) {
 		lateCount = 0,
 		excuseCount = 0,
 		absenceCount = 0;
-	var parsePrevDateMonth = Date.parse(reportData.report[0].date);
+	var parsePrevDateMonth = Date.parse(reportData[0].date);
 	var prevDateMonth = new Date(parsePrevDateMonth).getMonth();
 
-	for (let i = 0; i < reportData.report.length; i++) {
-		let { date, attendance, late, excuse, absence } = reportData.report[i];
+	for (let i = 0; i < reportData.length; i++) {
+		let { date, attendance, late, excuse, absence } = reportData[i];
 
 		// Converting date string in database into a date object to compare
 		let parseDate = Date.parse(date);
@@ -54,8 +54,8 @@ function renderMonthReport(reportData, monthReportContainer) {
 }
 
 function renderDayReport(reportData) {
-	for (let i = 0; i < reportData.report.length; i++) {
-		let { date, time, attendance, late, excuse, absence } = reportData.report[i];
+	for (let i = 0; i < reportData.length; i++) {
+		let { date, time, attendance, late, excuse, absence } = reportData[i];
 
 		// Converting employee's attendance status into binary string to identify it's value
 		let empAttendStatus = attendance.toString() + late + excuse + absence;

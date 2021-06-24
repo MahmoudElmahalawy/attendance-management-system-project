@@ -19,7 +19,7 @@ import { renderMonthReport, renderDayReport } from "./employee-reports.js";
 											<p class="small text-secondary mb-0">Age: ${userData.age}</p></div>`);
 
 		// Getting employee's reports
-		const fetchReport = await fetch(`http://localhost:3000/reports/${empLoginId}`);
+		const fetchReport = await fetch(`http://localhost:3000/reports?empId=${empLoginId}`);
 		const reportData = await fetchReport.json();
 
 		// Displaying reports for the user

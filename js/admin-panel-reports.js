@@ -1,6 +1,10 @@
 import { renderMonthReport } from "./employee-reports.js";
 
-function renderReportsForAdmin(usersData, reportsData) {
+function renderReportsForAdmin(usersData, reportsDataObjs) {
+	console.log("Reports before grouping ", reportsDataObjs);
+	let reportsData = groupArrayOfObjectsByValue(reportsDataObjs, "empId");
+
+	console.log("Reports after grouping ", reportsData);
 	for (let i = 0; i < usersData.length; i++) {
 		let monthAccordionItem = `<div class="accordion-item">
         <h2 class="accordion-header" id="heading${i + 1}">
@@ -34,8 +38,8 @@ function renderReportsForAdmin(usersData, reportsData) {
         </div>
         </div>`;
 		$("#allEmployeesDayReport").append(dayAccordionItem);
-		for (let j = 0; j < reportsData[i].report.length; j++) {
-			let { date, time, attendance, late, excuse, absence } = reportsData[i].report[j];
+		for (let j = 0; j < reportsData[i].length; j++) {
+			let { date, time, attendance, late, excuse, absence } = reportsData[i][j];
 
 			// Converting employee's attendance status into binary string to identify it's value
 			let empAttendStatus = attendance.toString() + late + excuse + absence;
@@ -61,6 +65,18 @@ function renderReportsForAdmin(usersData, reportsData) {
 			$(`.daily-report-for-emp-${i}`).append(dayReportRender);
 		}
 	}
+}
+
+function groupArrayOfObjectsByValue(list, key) {
+	let arrOfObjects = list.reduce(function (prev, cur) {
+		(prev[cur[key]] = prev[cur[key]] || []).push(cur);
+		return prev;
+	}, []);
+
+	// Filtering empty elements out of the array
+	return arrOfObjects.filter(function (e) {
+		return e != null;
+	});
 }
 
 export { renderReportsForAdmin };
