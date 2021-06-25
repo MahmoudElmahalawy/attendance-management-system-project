@@ -27,8 +27,8 @@ npm run json:server
 
 | Name     | Value  |
 | -------- | ------ |
-| userName | String |
 | id       | Number |
+| userName | String |
 | fName    | String |
 | lName    | String |
 | address  | String |
@@ -43,8 +43,8 @@ npm run json:server
 
 | Name       | Value    |
 | ---------- | -------- |
-| empId      | Number   |
 | id         | Number   |
+| empId      | Number   |
 | date       | Date     |
 | time       | DateTime |
 | attendance | Boolean  |

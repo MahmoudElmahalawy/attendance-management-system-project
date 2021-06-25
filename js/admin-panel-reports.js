@@ -1,17 +1,18 @@
+import { groupArrayOfObjectsByValue } from "./general.js";
 import { renderMonthReport } from "./employee-reports.js";
 
 function renderReportsForAdmin(usersData, reportsDataObjs) {
-	console.log("Reports before grouping ", reportsDataObjs);
 	let reportsData = groupArrayOfObjectsByValue(reportsDataObjs, "empId");
 
-	console.log("Reports after grouping ", reportsData);
 	for (let i = 0; i < usersData.length; i++) {
 		let monthAccordionItem = `<div class="accordion-item">
         <h2 class="accordion-header" id="heading${i + 1}">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${
 			i + 1
 		}">
-        ${usersData[i].userName}
+        ${usersData[i].fName} ${usersData[i].lName} (${usersData[i].userName}) ${
+			usersData[i].empType ? "<span class='badge rounded-pill bg-secondary ms-2'>Admin</span>" : ""
+		}
         </button>
         </h2>
         <div id="collapse${i + 1}" class="accordion-collapse collapse" data-bs-parent="#allEmployeesMonthReport">
@@ -30,7 +31,9 @@ function renderReportsForAdmin(usersData, reportsDataObjs) {
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${
 			i + 1
 		}">
-        ${usersData[i].userName}
+        ${usersData[i].fName} ${usersData[i].lName} (${usersData[i].userName}) ${
+			usersData[i].empType ? "<span class='badge rounded-pill bg-secondary ms-2'>Admin</span>" : ""
+		}
         </button>
         </h2>
         <div id="collapse${i + 1}" class="accordion-collapse collapse" data-bs-parent="#allEmployeesDayReport">
@@ -65,18 +68,6 @@ function renderReportsForAdmin(usersData, reportsDataObjs) {
 			$(`.daily-report-for-emp-${i}`).append(dayReportRender);
 		}
 	}
-}
-
-function groupArrayOfObjectsByValue(list, key) {
-	let arrOfObjects = list.reduce(function (prev, cur) {
-		(prev[cur[key]] = prev[cur[key]] || []).push(cur);
-		return prev;
-	}, []);
-
-	// Filtering empty elements out of the array
-	return arrOfObjects.filter(function (e) {
-		return e != null;
-	});
 }
 
 export { renderReportsForAdmin };

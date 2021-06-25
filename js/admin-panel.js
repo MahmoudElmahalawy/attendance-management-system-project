@@ -1,11 +1,12 @@
 import { renderReportsForAdmin } from "./admin-panel-reports.js";
+import { recordAttendance } from "./record-attendance.js";
 
 (function () {
-	alert("Admin login id =====> " + sessionStorage.getItem("empLoginId"));
-	// $(".monthly-report").html("");
-	// $(".daily-report").html("");
+	const empType = sessionStorage.getItem("empType");
 	const adminLoginId = sessionStorage.getItem("empLoginId");
-	if (adminLoginId == 1) {
+	alert("Admin login id =====> " + adminLoginId);
+
+	if (empType) {
 		// Handling data to be displayed for employee's profile
 		(async function () {
 			// Getting admin info
@@ -50,24 +51,7 @@ import { renderReportsForAdmin } from "./admin-panel-reports.js";
 		$("#recordForm").submit(function (e) {
 			e.preventDefault();
 			let userName = $(this).find(":text").val();
-			(async function () {
-				const fetchGetRes = await fetch(`http://localhost:3000/users?userName=${userName}`);
-				const data = await fetchGetRes.json();
-
-				if (!data[0]) {
-					alert("Username is incorrect please try again!");
-					$("#recordForm").trigger("reset");
-					return;
-				}
-
-				await fetch(`http://localhost:3000/reports/${data[0].id}`, {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({ ay: "7aga" }),
-				});
-			})();
+			recordAttendance(userName);
 		});
 	} else {
 		alert("You are not an admin!");

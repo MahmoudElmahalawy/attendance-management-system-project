@@ -1,174 +1,265 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"fName": "Mahmoud",
-			"lName": "Hamdy",
-			"address": "Tanta",
-			"email": "elmehalawy7@gmail.com",
-			"age": 24,
-			"userName": "MahmoudAdmin",
-			"password": "12345",
-			"empType": 1,
-			"reportId": 1
-		},
-		{
-			"id": 2,
-			"fName": "Mohamed",
-			"lName": "Khaled",
-			"address": "Mansoura",
-			"email": "mohamedkhaled4196@gmail.com",
-			"age": 24,
-			"userName": "MohamedKhaled",
-			"password": "12345",
-			"empType": 0,
-			"reportId": 2
-		},
-		{
-			"id": 3,
-			"fName": "Aya",
-			"lName": "Wadea",
-			"address": "Mansoura",
-			"email": "ayaelsaeed27@gmail.com",
-			"age": 30,
-			"userName": "Aya95iti",
-			"password": "12345",
-			"empType": 0,
-			"reportId": 3
-		},
-		{
-			"id": 4,
-			"fName": "Wafaa",
-			"lName": "Ibraheem",
-			"address": "Mansoura",
-			"email": "wafaa.ibraheem55@gmail.com",
-			"age": 27,
-			"userName": "Waf222iti",
-			"password": "12345",
-			"empType": 0,
-			"reportId": 4
-		}
-	],
-	"reports": [
-		{
-			"empId": 1,
-			"id": 1,
-			"date": "5/31/2021",
-			"time": "7:01:00 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 1,
-			"id": 2,
-			"date": "6/15/2021",
-			"time": "7:00:00 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 1,
-			"id": 3,
-			"date": "6/16/2021",
-			"time": "07:30:00 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 2,
-			"id": 4,
-			"date": "5/31/2021",
-			"time": "8:06:00 AM",
-			"attendance": 0,
-			"late": 1,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 2,
-			"id": 5,
-			"date": "6/15/2021",
-			"time": "7:30:05 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 2,
-			"id": 6,
-			"date": "6/16/2021",
-			"time": "7:36:14 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 3,
-			"id": 7,
-			"date": "5/31/2021",
-			"time": "9:07:00 AM",
-			"attendance": 0,
-			"late": 1,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 3,
-			"id": 8,
-			"date": "6/15/2021",
-			"time": "7:00:00 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 3,
-			"id": 9,
-			"date": "6/16/2021",
-			"time": "8:59:00 AM",
-			"attendance": 0,
-			"late": 1,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 4,
-			"id": 10,
-			"date": "5/31/2021",
-			"time": "7:49:00 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		},
-		{
-			"empId": 4,
-			"id": 11,
-			"date": "6/15/2021",
-			"time": "12:00:00 PM",
-			"attendance": 0,
-			"late": 0,
-			"excuse": 1,
-			"absence": 0
-		},
-		{
-			"empId": 4,
-			"id": 12,
-			"date": "6/16/2021",
-			"time": "7:59:00 AM",
-			"attendance": 1,
-			"late": 0,
-			"excuse": 0,
-			"absence": 0
-		}
-	]
+  "users": [
+    {
+      "id": 1,
+      "fName": "Mahmoud",
+      "lName": "Hamdy",
+      "address": "Tanta",
+      "email": "elmehalawy7@gmail.com",
+      "age": 24,
+      "userName": "MahmoudAdmin",
+      "password": "12345",
+      "empType": 1,
+      "reportId": 1
+    },
+    {
+      "id": 2,
+      "fName": "Mohamed",
+      "lName": "Khaled",
+      "address": "Mansoura",
+      "email": "mohamedkhaled4196@gmail.com",
+      "age": 24,
+      "userName": "MohamedKhaled",
+      "password": "12345",
+      "empType": 0,
+      "reportId": 2
+    },
+    {
+      "id": 3,
+      "fName": "Aya",
+      "lName": "Wadea",
+      "address": "Mansoura",
+      "email": "ayaelsaeed27@gmail.com",
+      "age": 30,
+      "userName": "Aya95iti",
+      "password": "12345",
+      "empType": 0,
+      "reportId": 3
+    },
+    {
+      "id": 4,
+      "fName": "Wafaa",
+      "lName": "Ibraheem",
+      "address": "Mansoura",
+      "email": "wafaa.ibraheem55@gmail.com",
+      "age": 27,
+      "userName": "Waf222iti",
+      "password": "12345",
+      "empType": 0,
+      "reportId": 4
+    },
+    {
+      "fName": "Laith",
+      "lName": "Alexander",
+      "address": "Vel quo velit et bea",
+      "email": "xyse@mailinator.com",
+      "age": 38,
+      "userName": "Lai6129in",
+      "password": "XhQkkapb",
+      "empType": 0,
+      "id": 5
+    }
+  ],
+  "reports": [
+    {
+      "empId": 1,
+      "id": 1,
+      "date": "5/31/2021",
+      "time": "7:01:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 1,
+      "id": 2,
+      "date": "6/15/2021",
+      "time": "7:00:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 1,
+      "id": 3,
+      "date": "6/16/2021",
+      "time": "07:30:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 2,
+      "id": 4,
+      "date": "5/31/2021",
+      "time": "8:06:00 AM",
+      "attendance": 0,
+      "late": 1,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 2,
+      "id": 5,
+      "date": "6/15/2021",
+      "time": "7:30:05 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 2,
+      "id": 6,
+      "date": "6/16/2021",
+      "time": "7:36:14 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 3,
+      "id": 7,
+      "date": "5/31/2021",
+      "time": "9:07:00 AM",
+      "attendance": 0,
+      "late": 1,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 3,
+      "id": 8,
+      "date": "6/15/2021",
+      "time": "7:00:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 3,
+      "id": 9,
+      "date": "6/16/2021",
+      "time": "8:59:00 AM",
+      "attendance": 0,
+      "late": 1,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 4,
+      "id": 10,
+      "date": "5/31/2021",
+      "time": "7:49:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 4,
+      "id": 11,
+      "date": "6/15/2021",
+      "time": "12:00:00 PM",
+      "attendance": 0,
+      "late": 0,
+      "excuse": 1,
+      "absence": 0
+    },
+    {
+      "empId": 4,
+      "id": 12,
+      "date": "6/16/2021",
+      "time": "7:59:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 4,
+      "id": 13,
+      "date": "6/24/2021",
+      "time": "11:33:00 PM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0
+    },
+    {
+      "empId": 1,
+      "date": "6/24/2021",
+      "time": "11:36:00 PM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0,
+      "id": 14
+    },
+    {
+      "empId": 3,
+      "date": "7/24/2021",
+      "time": "11:36:00 PM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0,
+      "id": 14
+    },
+    {
+      "empId": 4,
+      "date": "6/25/2021",
+      "time": "3:45:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0,
+      "id": 15
+    },
+    {
+      "empId": 4,
+      "date": "6/25/2021",
+      "time": "3:45:00 AM",
+      "attendance": 1,
+      "late": 0,
+      "excuse": 0,
+      "absence": 0,
+      "id": 16
+    },
+    {
+      "empId": 4,
+      "date": "6/25/2021",
+      "time": "3:53:00 AM",
+      "attendance": 0,
+      "late": 1,
+      "excuse": 0,
+      "absence": 0,
+      "id": 17
+    },
+    {
+      "empId": 1,
+      "date": "6/25/2021",
+      "time": "3:53:00 AM",
+      "attendance": 0,
+      "late": 1,
+      "excuse": 0,
+      "absence": 0,
+      "id": 18
+    },
+    {
+      "empId": 5,
+      "date": "6/25/2021",
+      "time": "1:15:00 PM",
+      "attendance": 0,
+      "late": 0,
+      "excuse": 0,
+      "absence": 1,
+      "id": 19
+    }
+  ]
 }

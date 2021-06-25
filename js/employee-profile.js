@@ -22,8 +22,9 @@ import { renderMonthReport, renderDayReport } from "./employee-reports.js";
 		const fetchReport = await fetch(`http://localhost:3000/reports?empId=${empLoginId}`);
 		const reportData = await fetchReport.json();
 
-		// Displaying reports for the user
 		console.log(reportData);
+
+		// Displaying reports for the user
 		renderMonthReport(reportData, ".monthly-report");
 		renderDayReport(reportData);
 	})();

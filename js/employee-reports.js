@@ -1,17 +1,4 @@
-const monthsNames = [
-	"January",
-	"February",
-	"March",
-	"April",
-	"May",
-	"June",
-	"July",
-	"August",
-	"September",
-	"October",
-	"November",
-	"December",
-];
+import { monthsNames, groupArrayOfObjectsByValue } from "./general.js";
 
 // Looping on daily reports to do monthly report
 function renderMonthReport(reportData, monthReportContainer) {
@@ -19,37 +6,50 @@ function renderMonthReport(reportData, monthReportContainer) {
 		lateCount = 0,
 		excuseCount = 0,
 		absenceCount = 0;
-	var parsePrevDateMonth = Date.parse(reportData[0].date);
-	var prevDateMonth = new Date(parsePrevDateMonth).getMonth();
+	// Converting date string in database into a date object
+	//var parsePrevDateMonth = Date.parse(reportData[0].date);
+	//var prevDateMonth = new Date(parsePrevDateMonth).getMonth();
 
+	// Creating new array grouped by month
+	var copyOfReport = [];
 	for (let i = 0; i < reportData.length; i++) {
-		let { date, attendance, late, excuse, absence } = reportData[i];
+		// Copying report into a new array
+		copyOfReport.push(reportData[i]);
 
-		// Converting date string in database into a date object to compare
-		let parseDate = Date.parse(date);
-		var curDateMonth = new Date(parseDate).getMonth();
+		// Getting month number from date in report
+		var parseDate = Date.parse(reportData[i].date);
+		var monthNum = new Date(parseDate).getMonth();
 
-		if (curDateMonth === prevDateMonth) {
+		// Overwriting date from full string to only month number
+		copyOfReport[i] = { ...copyOfReport[i], date: monthNum };
+	}
+
+	// Grouping the cloned array by month number
+	let reportGroupedByMonth = groupArrayOfObjectsByValue(copyOfReport, "date");
+	console.log("reportGroupedByMonth", reportGroupedByMonth);
+
+	for (let i = 0; i < reportGroupedByMonth.length; i++) {
+		let month = `<h2>${monthsNames[reportGroupedByMonth[i][0].date]}</h2>`;
+		attendCount = 0;
+		lateCount = 0;
+		excuseCount = 0;
+		absenceCount = 0;
+		$(monthReportContainer).append(month);
+		for (let j = 0; j < reportGroupedByMonth[i].length; j++) {
+			let { date, attendance, late, excuse, absence } = reportGroupedByMonth[i][j];
 			attendCount += attendance;
 			lateCount += late;
 			excuseCount += excuse;
 			absenceCount += absence;
-			let monthReportHtml = `<h2>${monthsNames[curDateMonth]}</h2>
-				<ul>
-				<li>Attendance: ${attendCount}</li>
-				<li>Late: ${lateCount}</li>
-				<li>Excuse: ${excuseCount}</li>
-				<li>Absence: ${absenceCount}</li>
-				</ul>`;
-
-			$(monthReportContainer).append(monthReportHtml);
-		} else {
-			prevDateMonth = curDateMonth;
-			attendCount = attendance;
-			lateCount = late;
-			excuseCount = excuse;
-			absenceCount = absence;
 		}
+		let monthReportHtml = `<ul>
+		<li>Attendance: ${attendCount}</li>
+		<li>Late: ${lateCount}</li>
+		<li>Excuse: ${excuseCount}</li>
+		<li>Absence: ${absenceCount}</li>
+		</ul>`;
+
+		$(monthReportContainer).append(monthReportHtml);
 	}
 }
 

@@ -23,6 +23,7 @@ function verifyAuthenticityOfAdmin(userName, userPassword) {
 			alert("You're not allowed to enter admin panel, Use normal login to view profile.");
 			$("#adminLoginForm").trigger("reset");
 		} else {
+			sessionStorage.setItem("empType", empType);
 			sessionStorage.setItem("empLoginId", id);
 			window.location.replace("/admin-panel.html");
 		}
@@ -33,11 +34,12 @@ function verifyAuthenticityOfAdmin(userName, userPassword) {
 function verifyAuthenticityOfEmp(userName, userPassword) {
 	if (!(userName && userPassword)) return;
 	(async function () {
-		const { isAuthed, id } = await checkEmpCreds(userName, userPassword);
+		const { isAuthed, id, empType } = await checkEmpCreds(userName, userPassword);
 		if (!isAuthed) {
 			alert("Username and/or password is incorrect, Please try again.");
 			$("#loginForm").trigger("reset");
 		} else {
+			sessionStorage.setItem("empType", empType);
 			sessionStorage.setItem("empLoginId", id);
 			window.location.replace("/profile.html");
 		}
